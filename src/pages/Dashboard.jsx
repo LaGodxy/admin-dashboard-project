@@ -6,12 +6,12 @@ import LogCard from "../components/LogCard";
 export default function Dashboard() {
   return (
     <div className="containermx-auto px-4 sm:px-6 lg:px-8">
-      <div className="py-8">
+      <div className="py-2">
         <h1 className="text-2xl font-semibold text-gray-900 mb-6 flex items-start">Dashboard</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="bg-white shadow rounded-lg md:col-span-2 md:h-full sm:h-full sm:col-span-2 lg:col-span-1 p-2 lg:h-[450px]">
-            <h4 className="text-2xl font-semibold text-gray-900 mb-2 flex items-start">Projects</h4>
-            <img src={plantCareApp} alt="plantCareApp" className="" />
+          <div className="bg-white shadow rounded-3xl md:col-span-2 md:h-full sm:h-full sm:col-span-2 lg:col-span-1 p-2">
+            <h4 className="text-2xl font-semibold text-gray-900 mb-2 flex items-start h-fit">Projects</h4>
+            <img src={plantCareApp} alt="plantCareApp" className="flex items-center" />
           </div>
           <div className="col-span-2">
             <TaskPieChart/>

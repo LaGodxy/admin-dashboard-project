@@ -20,6 +20,7 @@ import CreateTasks from './pages/CreateTasks';
 import ProjectsStats from './pages/ProjectsStats';
 import Performance from './pages/Performance';
 
+// Define the router
 const router = createBrowserRouter([
   {
     path: '/',
@@ -33,95 +34,75 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <Layout><Outlet /></Layout>, 
     children: [
-      // Dashboard Home
       {
         index: true,
         element: <Dashboard />
       },
       {
-        path: 'projects-stats',
+        path: '/dashboard/project',
+        element: <Project />
+      },
+      {
+        path: '/dashboard/projects-stats',
         element: <ProjectsStats />
       },
       {
-        path: 'performance',
-        element: <Performance />
+        path: '/dashboard/profile',
+        element: <Profile />
       },
-
-      // Project Section
       {
-        path: 'project',
-        element: <Project />,
-        children: [
-          {
-            path: 'projects-stats', // Relative path
-            element: <ProjectsStats />
-          },
-          {
-            path: 'addodle', // Relative path
-            element: <ProjectAddodle />
-          },
-          {
-            path: 'addodle-icon', // Relative path
-            element: <ProjectAddodleIcon />
-          }
-        ]
+        path: '/dashboard/edit-profile',
+        element: <EditProfile />
       },
-
-      // Tasks Section
       {
-        path: 'tasks', // Relative path
-        element: <Tasks />,
-        children: [
-          {
-            path: 'subtasks', // Relative path
-            element: <TasksSubtasks />
-          },
-          {
-            path: 'subtaskform', // Relative path
-            element: <SubTaskForm />
-          },
-          {
-            path: 'tasksaddodle', // Relative path
-            element: <TasksAddodle />
-          }
-        ]
+        path: '/dashboard/adduser',
+        element: <AddUser />
       },
-
-      // Performance Section
       {
-        path: 'create', // Relative path
+        path: '/dashboard/profile-few',
+        element: <ProfileFew />
+      },
+      {
+        path: '/dashboard/notification',
+        element: <Notification />
+      },
+      {
+        path: '/dashboard/create-tasks',
         element: <CreateTasks />
       },
-
-      // Profile Section
       {
-        path: 'profile',
-        element: <Profile />,
-        children: [
-          {
-            path: 'edit', // Relative path
-            element: <EditProfile />
-          },
-          {
-            path: 'few', // Relative path
-            element: <ProfileFew />
-          },
-          {
-            path: 'notification', // Relative path
-            element: <Notification />
-          }
-        ]
+        path: '/dashboard/project-addodle',
+        element: <ProjectAddodle />
       },
-
-      // Add User Section
       {
-        path: 'adduser',
-        element: <AddUser />
-      }
+        path: '/dashboard/tasksaddodle',
+        element: <TasksAddodle />
+      },
+      {
+        path: '/dashboard/project-addodle-icon',
+        element: <ProjectAddodleIcon />
+      },
+      {
+        path: '/dashboard/tasks',
+        element: <Tasks />
+      },
+      {
+        path: '/dashboard/tasks-subtasks',
+        element: <TasksSubtasks />
+      },
+      {
+        path: '/dashboard/subtaskform',
+        element: <SubTaskForm />
+      },
+      {
+        path: '/dashboard/performance',
+        element: <Performance />
+      },
     ]
   }
 ]);
 
+// The main App component
 function App() {
   return (
     <div className="App">
