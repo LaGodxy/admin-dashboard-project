@@ -17,11 +17,11 @@ export default function Dashboard() {
             <TaskPieChart/>
           </div>
           {/* Card 3 */}
-          <div className="bg-white shadow rounded-lg p-2 mt-0 md:col-span-2 sm:col-span-2 lg:col-span-1">
+          <div className="p-2 mt-0 md:col-span-2 sm:col-span-2 lg:col-span-1">
             <LogCard /> 
           </div>
           {/* Card 4 */}
-          <div className="bg-white shadow rounded-lg p-2 col-span-2 md:h-full sm:h-full">
+          <div className="p-2 col-span-2 md:h-full sm:h-full">
             <PerformanceCard/>
           </div>
           {/* Add more cards as needed */}

@@ -77,9 +77,9 @@ const LogCard = () => {
   
   return (
   <>
-    <div className="flex flex-col items-center justify-center p-6 w-full">
+    <div className="flex flex-col items-center justify-center p-6 w-full h-full bg-white rounded-3xl shadow-lg">
       {/* Header and Select Dropdown */}
-      <div className="flex justify-between items-center w-full mb-6">
+      <div className="flex justify-between items-center w-full">
         <h4 className="text-xl font-semibold text-gray-900">Work Log</h4>
         <select
           className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-md cursor-pointer"
@@ -93,12 +93,13 @@ const LogCard = () => {
       </div>
 
       {/* Responsive PieChart */}
+      <div className="mt-24 w-full mb-20">
       <ResponsiveContainer width="100%" height={250}>
         <PieChart>
           <Pie
             data={getChartData()}
-            cx={94} // X-coordinate for positioning the PieChart
-            cy={100} // Y-coordinate for positioning the PieChart
+            cx={94} 
+            cy={100} 
             innerRadius={68}
             outerRadius={100}
             fill="#17171d"
@@ -110,7 +111,7 @@ const LogCard = () => {
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
-                stroke={activeIndex === index ? '#000' : '#fff'} // Darker stroke on hover
+                stroke={activeIndex === index ? '#e2cbcb' : '#fff'} // Darker stroke on hover
                 strokeWidth={activeIndex === index ? 3 : 1} // Thicker stroke on hover
                 style={{
                   transform: activeIndex === index ? 'scale(1.05)' : 'scale(1)', // Slight scale on hover
@@ -120,12 +121,13 @@ const LogCard = () => {
             ))}
           </Pie>
 
-          {/* Vertical Legend */}
+          {/* Legend */}
           <Legend
            content={renderCustomLegend}
           />
         </PieChart>
       </ResponsiveContainer>
+      </div>
     </div>
     </>
   );

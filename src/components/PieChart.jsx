@@ -56,7 +56,7 @@ export default function TaskPieChart() {
   };
 
   return (
-    <div className="flex flex-col bg-white shadow-lg items-center justify-center mb-6">
+    <div className="flex flex-col bg-white shadow-lg items-center justify-center mb-6 p-6 rounded-3xl">
       <div className="flex justify-between items-center w-full px-8 mb-4"> {/* Flexbox for header and select alignment */}
         <h4 className="text-2xl font-semibold text-gray-900">Tasks</h4>
         <select

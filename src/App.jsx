@@ -18,6 +18,7 @@ import AddUser from './pages/AddUser';
 import Notification from './pages/Notification';
 import CreateTasks from './pages/CreateTasks';
 import ProjectsStats from './pages/ProjectsStats';
+import Performance from './pages/Performance';
 
 const router = createBrowserRouter([
   {
@@ -41,23 +42,26 @@ const router = createBrowserRouter([
         path: 'projects-stats',
         element: <ProjectsStats />
       },
+      {
+        path: 'performance',
+        element: <Performance />
+      },
 
       // Project Section
-      
       {
         path: 'project',
         element: <Project />,
         children: [
           {
-            path: 'projects-stats',
+            path: 'projects-stats', // Relative path
             element: <ProjectsStats />
           },
           {
-            path: 'addodle',
+            path: 'addodle', // Relative path
             element: <ProjectAddodle />
           },
           {
-            path: 'addodle-icon',
+            path: 'addodle-icon', // Relative path
             element: <ProjectAddodleIcon />
           }
         ]
@@ -65,32 +69,29 @@ const router = createBrowserRouter([
 
       // Tasks Section
       {
-        path: 'tasks',
+        path: 'tasks', // Relative path
         element: <Tasks />,
         children: [
           {
-            path: 'subtasks',
+            path: 'subtasks', // Relative path
             element: <TasksSubtasks />
           },
           {
-            path: 'subtaskform',
+            path: 'subtaskform', // Relative path
             element: <SubTaskForm />
           },
           {
-            path: 'tasksaddodle',
+            path: 'tasksaddodle', // Relative path
             element: <TasksAddodle />
-          }   
+          }
         ]
       },
 
       // Performance Section
       {
-        path: 'create',
-        element: <CreateTasks />,
-        children: [
-          
-          ]
-        },
+        path: 'create', // Relative path
+        element: <CreateTasks />
+      },
 
       // Profile Section
       {
@@ -98,15 +99,15 @@ const router = createBrowserRouter([
         element: <Profile />,
         children: [
           {
-            path: 'edit',
+            path: 'edit', // Relative path
             element: <EditProfile />
           },
           {
-            path: 'few',
+            path: 'few', // Relative path
             element: <ProfileFew />
           },
           {
-            path: 'notification',
+            path: 'notification', // Relative path
             element: <Notification />
           }
         ]

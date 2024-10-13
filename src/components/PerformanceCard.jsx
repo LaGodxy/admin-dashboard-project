@@ -53,8 +53,8 @@ const PerformanceCard = () => {
 
   return (
     <>
-     <div className="bg-white shadow-lg mb-6">
-     <div className="flex justify-between items-start mb-4">
+     <div className="bg-white shadow-lg p-6 rounded-3xl">
+     <div className="flex justify-between items-start mb-6">
       <h4 className="text-2xl font-semibold text-gray-900 mb-2 flex items-start">Performance</h4>
         <select
           className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-lg cursor-pointer outline-none"
