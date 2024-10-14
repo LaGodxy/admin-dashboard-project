@@ -45,6 +45,10 @@ const router = createBrowserRouter([
         element: <Project />
       },
       {
+        path: '/dashboard/project-completed',
+        element: <Project2 />
+      },
+      {
         path: '/dashboard/projects-stats',
         element: <ProjectsStats />
       },
