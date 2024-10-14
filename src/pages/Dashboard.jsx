@@ -32,7 +32,10 @@ export default function Dashboard() {
           </div>
           {/* Card 4 */}
           <div className="p-2 col-span-2 md:h-full sm:h-full">
+          <Link to="/dashboard/performance">
             <PerformanceCard/>
+          </Link>
+          
           </div>
           {/* Add more cards as needed */}
         </div>

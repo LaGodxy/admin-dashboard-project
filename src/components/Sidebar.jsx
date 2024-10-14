@@ -54,7 +54,9 @@ const Sidebar = () => {
               <br />
               <span className="text-gray-600 text-sm ml-8">U.P, India</span>
             </div>
-            <img src={userAvatar} alt="User Avatar" className="h-10 w-10 rounded-full border border-gray-300" />
+            <Link to="/dashboard/project-addodle-icon">
+              <img src={userAvatar} alt="User Avatar" className="h-10 w-10 rounded-full border border-gray-300" />
+            </Link>
           </div>
         </div>
       </nav>
