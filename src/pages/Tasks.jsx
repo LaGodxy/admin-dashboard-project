@@ -112,7 +112,7 @@ const TaskCard = ({ title, description, comments, attachments, daysLeft, team, i
   <Draggable draggableId={title} index={index}>
     {(provided) => (
       <div
-        className="bg-white p-4 rounded-lg shadow-lg w-full"
+        className="bg-white p-4 rounded-lg shadow-lg w-full font-roboto"
         ref={provided.innerRef}
         {...provided.draggableProps}
         {...provided.dragHandleProps}
@@ -199,8 +199,10 @@ const Tasks = () => {
 
   return (
     <>
+      <div>
+        <p className="text-gray-500 text-lg font-bold mb-4 sm:text-sm font-nunito">Tasks</p>
       <div className="bg-white rounded-lg shadow mb-6">
-      <div className="p-4">
+      <div className="p-4 font-roboto">
       <p className="text-gray-500 font-bold text-xs sm:text-sm">Overview</p>
       <p className="text-gray-500 text-xs sm:text-sm">Edit or modify all cards as you want</p>
       </div>
@@ -264,6 +266,7 @@ const Tasks = () => {
           <button onClick={handleAddTask}>Add Task</button>
         </div>
       </Modal>
+      </div>
       </div>
     </>
   );

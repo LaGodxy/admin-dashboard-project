@@ -45,7 +45,7 @@ const TasksSubtasks = () => {
       <div className="">
         {/* Breadcrumb and Project Header */}
         <div className="mb-6">
-          <p className="text-gray-500 mt-2 text-xs sm:text-sm">
+          <p className="text-gray-500 mt-2 text-xs sm:text-sm font-nunito">
             Tasks/Subtasks
           </p>
         </div>
@@ -61,20 +61,20 @@ const TasksSubtasks = () => {
                       <div>
                         <img src={light} alt="Light" className="mr-2" />
                         <div className="flex flex-col">
-                          <p className="text-sm font-semibold">{task.title}</p>
+                          <p className="text-sm font-semibold font-montserrat">{task.title}</p>
                           <div className="flex flex-col sm:flex-row text-xs space-x-2">
-                            <p className="text-gray-500">{task.opened}</p>
-                            <span className="px-2 py-1 my-4 bg-green-100 text-green-600 rounded-full text-center lg:m-0">
+                            <p className="text-gray-500 font-roboto">{task.opened}</p>
+                            <span className="px-2 py-1 my-4 bg-green-100 text-green-600 rounded-full text-center lg:m-0 font-montserrat">
                               {task.completion}
                             </span>
-                            <span className="px-2 py-1 my-4 bg-green-100 rounded-full text-center lg:m-0">
+                            <span className="px-2 py-1 my-4 bg-green-100 rounded-full text-center lg:m-0 font-montserrat">
                               {task.status}
                             </span>
                           </div>
                         </div>
                       </div>
                       <div className="flex items-center space-x-4">
-                        <span className="flex font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">
+                        <span className="flex font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full font-inter">
                           <img src={clockLoader} alt="Clock" className="mr-2" />{" "}
                           {task.timeSpent}
                         </span>

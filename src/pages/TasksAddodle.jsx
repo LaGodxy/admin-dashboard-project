@@ -101,7 +101,7 @@ const TasksAddodle = () => {
       <div className="">
         {/* Breadcrumb and Project Header */}
         <div className="mb-6">
-          <p className="text-gray-500 mt-2 text-xs sm:text-sm">Tasks</p>
+          <p className="text-gray-500 mt-2 text-xs sm:text-sm font-nunito">Tasks</p>
         </div>
 
         {/* Task Container */}
@@ -114,14 +114,14 @@ const TasksAddodle = () => {
                     <div className="flex items-center">
                       <img src={light} alt="Light" className="mr-2" />
                       <div className="flex flex-col">
-                        <p className="text-sm font-semibold">{task.title}</p>
+                        <p className="text-sm font-semibold font-montserrat">{task.title}</p>
                         <div className="flex flex-col sm:flex-row text-xs space-x-2">
-                          <p className="text-gray-500">{task.opened}</p>
+                          <p className="text-gray-500 font-roboto">{task.opened}</p>
                           <span className="px-2 py-1 my-4 bg-green-100 text-green-600 rounded-full text-center lg:m-0">
                             {task.completion}
                           </span>
                           <span
-                            className={`px-2 py-1 my-4 rounded-full text-center lg:m-0 ${
+                            className={`px-2 py-1 my-4 rounded-full text-center lg:m-0 font-montserrat ${
                               task.status === "high"
                                 ? "bg-red-100 text-red-500"
                                 : "bg-green-100 text-green-600"
@@ -136,7 +136,7 @@ const TasksAddodle = () => {
 
                   <div className="flex items-center space-x-4">
                     <span
-                      className={`flex font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full ${
+                      className={`flex font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full font-montserrat ${
                         task.timeSpent === "00:15:00"
                           ? "bg-red-100 text-red-500"
                           : "bg-green-100 text-green-600"

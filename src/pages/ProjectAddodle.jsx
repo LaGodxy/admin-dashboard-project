@@ -98,7 +98,7 @@ const ProjectAddodle = () => {
       <div className="">
         {/* Breadcrumb and Project Header */}
         <div className="mb-6">
-          <p className="text-gray-500 text-xs sm:text-sm">Projects / Addodle</p>
+          <p className="text-gray-500 text-xs sm:text-sm font-nunito">Projects / Addodle</p>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
             <div className="flex items-center space-x-4">
               <h2 className="text-2xl sm:text-3xl font-bold">Addodle</h2>
@@ -136,20 +136,20 @@ const ProjectAddodle = () => {
                     </div>
                   </div>
                 </div>
-                <span className="px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
+                <span className="px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full font-inter">
                   OnTrack
                 </span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 mt-4 sm:mt-0 md:flex-row">
               <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                <p className="text-gray-700 text-sm">Time spent</p>
+                <p className="text-gray-700 text-sm font-inter">Time spent</p>
                 <span className="flex font-bold px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
                   <img src={clockLoader} alt="Clock" className="mr-1" /> 2M : 0W
                   : 0D
                 </span>
               </div>
-              <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
+              <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2 font-inter">
                 <p className="text-gray-700 text-sm">Deadline</p>
                 <span className="flex font-bold px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
                   <img src={clockLoader} alt="Clock" className="mr-1" /> 6M : 0W
@@ -175,11 +175,11 @@ const ProjectAddodle = () => {
                     <div className="flex items-center">
                       <img src={light} alt="Light" className="mr-2" />
                       <div className="flex flex-col">
-                        <p className="text-sm font-semibold">{task.title}</p>
+                        <p className="text-sm font-semibold font-montserrat">{task.title}</p>
                         <div className="flex flex-col sm:flex-row text-xs space-x-2">
-                          <p className="text-gray-500">{task.opened}</p>
+                          <p className="text-gray-500 font-roboto">{task.opened}</p>
                           <span
-                            className={`px-2 py-1 my-4 rounded-full text-center lg:m-0 ${
+                            className={`px-2 py-1 my-4 rounded-full text-center lg:m-0 font-montserrat ${
                               task.status === "Cancelled"
                                 ? "bg-red-100 text-red-500"
                                 : "bg-green-100 text-green-600"
@@ -187,14 +187,14 @@ const ProjectAddodle = () => {
                           >
                             {task.status}
                           </span>
-                          <span className="px-2 py-1 my-4 bg-green-100 text-green-600 rounded-full text-center lg:m-0">
+                          <span className="px-2 py-1 my-4 bg-green-100 text-green-600 rounded-full text-center lg:m-0 font-montserrat">
                             {task.completion}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex flex-col items-start text-gray-500">
+                    <div className="flex flex-col items-start text-gray-500 font-roboto">
                       <p>Start Date</p>
                       <p className="flex items-center">
                         <img src={calender} alt="Calendar" className="mr-2" />{" "}
@@ -202,7 +202,7 @@ const ProjectAddodle = () => {
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-start text-gray-500">
+                    <div className="flex flex-col items-start text-gray-500 font-roboto">
                       <p>End Date</p>
                       <p className="flex items-center">
                         <img src={calender} alt="Calendar" className="mr-2" />{" "}
@@ -211,7 +211,7 @@ const ProjectAddodle = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 font-inter">
                     <span className="flex font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">
                       <img src={clockLoader} alt="Clock" className="mr-2" />{" "}
                       {task.timeSpent}

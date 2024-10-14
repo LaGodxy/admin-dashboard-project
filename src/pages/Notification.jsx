@@ -27,8 +27,8 @@ const Notification = () => {
           {/* Notifications */}
           <div className="bg-white rounded-lg shadow-md p-6 flex-1">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-gray-700">Notifications</h3>
-              <button className="text-blue-500 text-sm">View all</button>
+              <h3 className="text-lg font-semibold text-gray-700 font-poppins">Notifications</h3>
+              <button className="text-blue-500 text-xs font-poppins">View all</button>
             </div>
             <div className="space-y-4">
               {[...Array(6)].map((_, index) => (

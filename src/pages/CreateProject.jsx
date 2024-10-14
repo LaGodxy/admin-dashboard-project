@@ -2,8 +2,8 @@
 const CreateProject = () => {
     return (
       <div className="h-scree p-4 md:p-8">
-          <h2 className="text-xl font-semibold text-gray-700 mb-6">Projects / Create Project</h2>
-        <div className="bg-white shadow-lg rounded-lg p-6 md:p-8">
+          <h2 className="text-xl font-semibold text-gray-700 mb-6 font-nunito">Projects / Create Project</h2>
+        <div className="bg-white shadow-lg rounded-lg p-6 md:p-8 font-openSans">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">
               {/* SubTask Title and Status */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-4">

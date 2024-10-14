@@ -29,6 +29,7 @@ const Performance = () => {
   return (
     <>
       <div className="h-screen p-4 md:p-8">
+        <p className="font-nunito">Performance Report</p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* PieChart (2 columns) */}
           <div className="lg:col-span-2">
@@ -50,9 +51,9 @@ const Performance = () => {
                     <div className="flex items-center">
                       <img src={light} alt="Light" className="mr-2" />
                       <div className="flex flex-col">
-                        <p className="text-sm font-semibold">{task.title}</p>
+                        <p className="text-sm font-semibold font-montserrat">{task.title}</p>
                         <div className="flex flex-col sm:flex-row text-xs space-x-2">
-                          <p className="text-gray-500">{task.opened}</p>
+                          <p className="text-gray-500 font-roboto">{task.opened}</p>
                         </div>
                       </div>
                     </div>

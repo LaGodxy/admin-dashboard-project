@@ -77,7 +77,7 @@ const LogCard = () => {
   
   return (
   <>
-    <div className="flex flex-col items-center justify-center p-6 w-full h-full bg-white rounded-3xl shadow-lg">
+    <div className="flex flex-col items-center justify-center p-6 w-full h-full bg-white rounded-3xl shadow-lg font-nunito">
       {/* Header and Select Dropdown */}
       <div className="flex justify-between items-center w-full">
         <h4 className="text-xl font-semibold text-gray-900">Work Log</h4>

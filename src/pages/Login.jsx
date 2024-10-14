@@ -34,14 +34,14 @@ export default function Login() {
                 src={signinIcon}
                 className="w-[20px] h-[20px]"
               />
-              <p className="ml-2">Asite Product System</p>
+              <p className="ml-2 font-manrope">Asite Product System</p>
             </div>
 
             {/* Welcome Section */}
-            <h2 className="mt-20 text-2xl font-bold leading-9 tracking-tight text-gray-900 flex items-start">
+            <h2 className="mt-20 text-2xl font-bold leading-9 tracking-tight text-gray-900 flex items-start font-manrope">
               Welcome back, Yash
             </h2>
-            <p className="text-sm leading-9 tracking-tight text-gray-300 flex items-start">
+            <p className="text-sm leading-9 tracking-tight text-gray-300 flex items-start font-spaceGrotesk">
               Welcome back! Please enter your details
             </p>
 
@@ -57,7 +57,7 @@ export default function Login() {
                       placeholder="Email"
                       required
                       autoComplete="email"
-                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0"
+                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0 font-spaceGrotesk"
                     />
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export default function Login() {
                       placeholder="Password"
                       required
                       autoComplete="current-password"
-                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0"
+                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0 font-spaceGrotesk"
                     />
                   </div>
                 </div>
@@ -84,13 +84,13 @@ export default function Login() {
                       type="checkbox"
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600"
                     />
-                    <label htmlFor="Terms-Conditions" className="ml-3 block text-sm leading-6 text-gray-700">
+                    <label htmlFor="Terms-Conditions" className="ml-3 block text-sm leading-6 text-gray-700 font-spaceGrotesk">
                       Terms & Conditions
                     </label>
                   </div>
 
                   <div className="text-sm leading-6">
-                    <a href="#" className="font-semibold text-gray-900 hover:text-indigo-500 underline">
+                    <a href="#" className="font-semibold text-gray-900 hover:text-indigo-500 underline font-spaceGrotesk">
                       Forgot password?
                     </a>
                   </div>
@@ -105,9 +105,9 @@ export default function Login() {
                   </button>
                 </div>
               </form>
-              <p className="mt-2 text-sm leading-6 text-gray-500">
+              <p className="mt-2 text-sm leading-6 text-gray-500 font-spaceGrotesk">
                 Don&apos;t have an account?{' '}
-                <a href="#" className="font-semibold text-gray-900 hover:text-indigo-500">
+                <a href="#" className="font-semibold text-gray-900 hover:text-indigo-500 font-spaceGrotesk">
                   Sign up for free
                 </a>
               </p>

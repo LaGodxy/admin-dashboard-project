@@ -13,9 +13,9 @@ const Project = () => {
     <>
       <div className="container px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between">
-            <h1 className="text-2xl font-semibold text-gray-900 mb-6 flex items-start">Projects</h1>
+            <h1 className="text-2xl font-semibold text-gray-900 mb-6 flex items-start font-nunito">Projects</h1>
             <Link to="/dashboard/create-project">
-              <button className="px-4 py-1 mb-4 bg-[#036EFF] text-white rounded-md hover:bg-blue-300">
+              <button className="px-4 py-1 mb-4 bg-[#036EFF] text-white rounded-md hover:bg-blue-300 font-inter">
                   Create
               </button>
             </Link>

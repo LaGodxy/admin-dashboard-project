@@ -5,10 +5,10 @@ const CreateTasks = () => {
     const [taskStatus, setTaskStatus] = useState('Pending');
     return (
       <div className="min-h-screen bg-gray-100 p-6 flex flex-col">
-        <div className="bg-white rounded-lg shadow-md p-6 w-full max-w-5xl mx-auto">
-          <h2 className="text-lg font-semibold text-gray-700 mb-4">Tasks / Create Tasks</h2>
+        <div className="bg-white rounded-lg shadow-md p-6 w-full font-openSans">
+          <h2 className="text-lg font-semibold text-gray-700 mb-4 font-nunito">Tasks / Create Tasks</h2>
   
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 font-openSans">
             {/* Task Title */}
             <div>
               <label className="block text-gray-600 text-sm font-medium mb-2">Task Title</label>
@@ -58,7 +58,7 @@ const CreateTasks = () => {
             </div>
           </div>
   
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 font-openSans">
             <div className="flex flex-wrap items-center justify-between space-x-4">
                 {/* Assign To Dropdown */}
                 <div className="flex flex-col">

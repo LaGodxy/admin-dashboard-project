@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaClock } from 'react-icons/fa';
-import yashGhori from "../assets/images/yashGhori.svg";
 import addodle from "../assets/images/addodle.svg";
 import marketPlace from "../assets/images/marketPlace.svg";
 import vonDracula from "../assets/images/vonDracula.svg";
@@ -17,6 +15,7 @@ import happy from "../assets/images/happy.svg";
 import v4mpyr from "../assets/images/v4mpyr.svg";
 import art from "../assets/images/art.svg";
 import WorkLogCard from '../components/WorkLogCard';
+import ProfileCard from '../components/ProfileCard';
 
 
 const ProfileFew = () => {
@@ -72,40 +71,10 @@ const ProfileFew = () => {
 
   return (
     <div className="h-screen">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Left Profile Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg col-span-1">
-          <div className="text-center">
-            <img src={yashGhori} alt="Profile" className="w-24 h-24 mx-auto rounded-full border-4 border-[#ED2590]" />
-            <h2 className="mt-4 text-xl font-bold">Yash Ghari</h2>
-            <p className="text-gray-500">Ahmedabad, Gujarat</p>
-            <p className="text-gray-500">India</p>
-          </div>
-          {/* Contact Info */}
-          <div className="mt-6 space-y-2">
-            <div className='border-t-[1px] border-b-[1px] border-[#D9E6F7]'>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <FaEnvelope />
-                <p>UI-Intern</p>
-                </div>
-                <div className="flex items-center space-x-2 text-gray-600">
-                <FaEnvelope />
-                <p>On-teak</p>
-                </div>
-              </div>
-            <div className="flex items-center space-x-2 text-gray-600">
-              <FaEnvelope />
-              <p>yghari@gmail.com</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-600">
-              <FaPhone />
-              <p>+91 7048144030</p>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-600">
-              <FaClock />
-              <p>PDT - J</p>
-            </div>
-          </div>
+        <div>
+            <ProfileCard/>
         </div>
 
         {/* Center Profile Section */}
@@ -133,8 +102,9 @@ const ProfileFew = () => {
           </div>
         </div>
 
-        {/* Right Profile Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg col-span-1 h-screen">
+        {/* Right Profile Section */} {/* Total Work Done Card */}
+        <div className="flex flex-col">
+        <div className="bg-white p-6 rounded-lg shadow-lg col-span-1">
           <div className="mb-6">
             <div className="flex justify-between">
               <h4 className="text-lg font-semibold">Projects</h4>
@@ -153,6 +123,11 @@ const ProfileFew = () => {
               ))}
             </div>
           </div>
+        </div>
+          
+        <div className="mt-20">
+            <WorkLogCard title='Total work done'/>
+        </div>
         </div>
       </div>
 
@@ -187,10 +162,6 @@ const ProfileFew = () => {
           </div>
         </div>
       )}
-      {/* Total Work Done Card */}
-      <div className="bg-[#F5F5F5] p-1 px-[-29px] rounded-lg shadow-md flex justify-end ml-[400px]">
-           <WorkLogCard title='Total work done'/>
-          </div>
     </div>
   );
 };

@@ -99,7 +99,7 @@ const ProjectAddodleIcon = () => {
       <div className="max-w-7xl mx-auto">
         {/* Breadcrumb and Project Header */}
         <div className="mb-6">
-          <p className="text-gray-500 text-xs sm:text-sm">Projects / Addodle</p>
+          <p className="text-gray-500 text-xs sm:text-sm font-nunito">Projects / Addodle</p>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
             <div className="flex items-center space-x-4">
               <h2 className="text-2xl sm:text-3xl font-bold">Addodle</h2>
@@ -137,21 +137,21 @@ const ProjectAddodleIcon = () => {
                     </div>
                   </div>
                 </div>
-                <span className="px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
+                <span className="px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full font-inter">
                   OnTrack
                 </span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-4 mt-4 sm:mt-0 md:flex-row">
               <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                <p className="text-gray-700 text-sm">Time spent</p>
+                <p className="text-gray-700 text-sm font-inter">Time spent</p>
                 <span className="flex font-bold px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
                   <img src={clockLoader} alt="Clock" className="mr-1" /> 2M : 0W
                   : 0D
                 </span>
               </div>
               <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                <p className="text-gray-700 text-sm">Deadline</p>
+                <p className="text-gray-700 text-sm font-inter">Deadline</p>
                 <span className="flex font-bold px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
                   <img src={clockLoader} alt="Clock" className="mr-1" /> 6M : 0W
                   : 0D
@@ -171,9 +171,9 @@ const ProjectAddodleIcon = () => {
                     <div className="flex items-center">
                       <img src={light} alt="Light" className="mr-2" />
                       <div className="flex flex-col">
-                        <p className="text-sm font-semibold">{task.title}</p>
-                        <div className="flex flex-col sm:flex-row text-xs space-x-2">
-                          <p className="text-gray-500">{task.opened}</p>
+                        <p className="text-sm font-semibold font-montserrat">{task.title}</p>
+                        <div className="flex flex-col sm:flex-row text-xs space-x-2 font-montserrat">
+                          <p className="text-gray-500 font-roboto">{task.opened}</p>
                           <span
                             className={`px-2 py-1 my-4 rounded-full text-center lg:m-0 ${
                               task.status === "Cancelled"
@@ -190,7 +190,7 @@ const ProjectAddodleIcon = () => {
                       </div>
                     </div>
 
-                    <div className="flex flex-col items-start text-gray-500">
+                    <div className="flex flex-col items-start text-gray-500 font-inter">
                       <p>Start Date</p>
                       <p className="flex items-center">
                         <img src={calender} alt="Calendar" className="mr-2" />{" "}

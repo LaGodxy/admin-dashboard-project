@@ -26,7 +26,7 @@ const ProjectCard = ({description, to, move}) => {
       {/* Header */}
       <div className="flex justify-between items-start p-2 mb-4 border-b-2 border-gray-600">
         <Link to={move}>
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold font-inter">
             Adoddle
             <span className="inline-block ml-2 text-gray-500">
               <img src={adoddleIcon} alt="adoddleIcon" />
@@ -34,7 +34,7 @@ const ProjectCard = ({description, to, move}) => {
           </h2>
         </Link>
         <span
-          className="text-sm bg-red-100 text-red-500 py-1 px-3 rounded-lg relative cursor-pointer"
+          className="text-sm bg-red-100 text-red-500 py-1 px-3 rounded-lg relative cursor-pointer font-inter"
           onMouseEnter={() => setHoveredStatus(true)}
           onMouseLeave={() => setHoveredStatus(false)}
         >
@@ -49,12 +49,12 @@ const ProjectCard = ({description, to, move}) => {
 
       {/* Description */}
           <Link to={to}>
-            <p className="text-gray-600 mb-4 text-justify tracking-[-2px]">{description}</p>
+            <p className="text-gray-600 mb-4 text-justify tracking-[-2px] font-inter">{description}</p>
           </Link>
       {/* Footer with date, avatars, and issues */}
       <div className="flex items-center">
         {/* Date */}
-        <div className="flex items-center text-red-500 text-sm">
+        <div className="flex items-center text-red-500 text-sm font-inter">
           <img src={hourglass} alt="hourglass" className="mr-2" />
           05 APRIL 2023
         </div>
@@ -89,7 +89,7 @@ const ProjectCard = ({description, to, move}) => {
 
         {/* Issues */}
         <div
-          className="flex items-center text-gray-500 text-sm relative cursor-pointer"
+          className="flex items-center text-gray-500 text-sm relative cursor-pointer font-inter"
           onMouseEnter={() => setHoveredIssues(true)}
           onMouseLeave={() => setHoveredIssues(false)}
         >

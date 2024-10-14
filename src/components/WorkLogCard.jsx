@@ -9,7 +9,7 @@ const WorkLogCard = () => {
 
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-lg p-5 w-64 relative"
+      className="bg-white rounded-lg shadow-lg p-6 w-60 relative"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
