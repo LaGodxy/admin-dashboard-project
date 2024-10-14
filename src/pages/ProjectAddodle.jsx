@@ -12,6 +12,8 @@ import clockLoader from "../assets/icons/clockLoader.svg";
 import light from "../assets/icons/light.svg";
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const ProjectAddodle = () => {
   const [hoveredAvatar, setHoveredAvatar] = useState(null);
@@ -136,9 +138,11 @@ const ProjectAddodle = () => {
               </div>
             </div>
             <div className="flex">
-              <button className="px-4 py-[1px] bg-[#036EFF] text-white rounded-md hover:bg-blue-300">
+              <Link to="/dashboard/create-tasks">
+              <button className="px-4 py-2 bg-[#036EFF] text-white rounded-md hover:bg-blue-300">
                 Assign Task
               </button>
+              </Link>
               <div className="flex flex-col sm:flex-row items-center sm:space-x-4 mt-4 sm:mt-0 md:flex-row">
               <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
                 <p className="text-gray-700 text-sm">Time spent</p>
