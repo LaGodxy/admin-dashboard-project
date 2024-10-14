@@ -37,7 +37,7 @@ const CreateTasks = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg col-span-1">
           <div className="mb-6">
             <div className="flex justify-between">
-              <h4 className="text-lg font-semibold">Projects</h4>
+              <h3 className="text-lg font-semibold">Projects</h3>
               <p className="text-[#ED2590] mt-2 inline-block">View all</p>
             </div>
             <div className="grid grid-cols-3 gap-4 mt-4">

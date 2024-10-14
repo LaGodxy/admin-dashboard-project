@@ -17,6 +17,7 @@ import SubTaskForm from './pages/SubTaskForm';
 import AddUser from './pages/AddUser';
 import Notification from './pages/Notification';
 import CreateTasks from './pages/CreateTasks';
+import CreateProject from './pages/CreateProject';
 import ProjectsStats from './pages/ProjectsStats';
 import Performance from './pages/Performance';
 
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/subtaskform',
         element: <SubTaskForm />
+      },
+      {
+        path: '/dashboard/create-project',
+        element: <CreateProject />
       },
       {
         path: '/dashboard/performance',

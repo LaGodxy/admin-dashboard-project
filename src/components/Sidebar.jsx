@@ -76,7 +76,7 @@ const Sidebar = () => {
                   activeItem === "projects" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/project" className="inline-flex items-center">
+                <Link to="/dashboard/project" className="inline-flex items-center">
                   <img src={projectIcon} alt="Project Icon" />
                   <span>Project</span>
                 </Link>
@@ -89,7 +89,7 @@ const Sidebar = () => {
                   activeItem === "tasks" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/tasks" className="inline-flex items-center">
+                <Link to="/dashboard/tasks" className="inline-flex items-center">
                   <img src={tasksIcon} alt="Tasks Icon" />
                   <span>Tasks</span>
                 </Link>
@@ -102,7 +102,7 @@ const Sidebar = () => {
                   activeItem === "workLogs" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/" className="inline-flex items-center">
+                <Link to="/dashboard" className="inline-flex items-center">
                   <img src={workLogsIcon} alt="Work Logs Icon" />
                   <span>Work Logs</span>
                 </Link>
@@ -115,7 +115,7 @@ const Sidebar = () => {
                   activeItem === "performance" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/create" className="inline-flex items-center">
+                <Link to="/dashboard/performance" className="inline-flex items-center">
                   <img src={performanceIcon} alt="Performance Icon" />
                   <span>Performance</span>
                 </Link>

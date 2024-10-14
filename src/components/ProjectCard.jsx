@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import adoddle1 from "../assets/images/adoddle1.svg";
 import adoddle2 from "../assets/images/adoddle2.svg";
@@ -8,7 +9,7 @@ import adoddleIcon from "../assets/icons/adoddleIcon.svg";
 import hourglass from "../assets/icons/hourglass.svg";
 import issuesIcon from "../assets/icons/issuesIcon.svg";
 
-const ProjectCard = ({description}) => {
+const ProjectCard = ({description, to, move}) => {
   const [hoveredAvatar, setHoveredAvatar] = useState(null);
   const [hoveredStatus, setHoveredStatus] = useState(false);
   const [hoveredIssues, setHoveredIssues] = useState(false);
@@ -24,12 +25,14 @@ const ProjectCard = ({description}) => {
     <div className="bg-white rounded-lg shadow-lg p-5 pb-0 max-w-sm">
       {/* Header */}
       <div className="flex justify-between items-start p-2 mb-4 border-b-2 border-gray-600">
-        <h2 className="text-2xl font-semibold">
-          Adoddle
-          <span className="inline-block ml-2 text-gray-500">
-            <img src={adoddleIcon} alt="adoddleIcon" />
-          </span>
-        </h2>
+        <Link to={move}>
+          <h2 className="text-2xl font-semibold">
+            Adoddle
+            <span className="inline-block ml-2 text-gray-500">
+              <img src={adoddleIcon} alt="adoddleIcon" />
+            </span>
+          </h2>
+        </Link>
         <span
           className="text-sm bg-red-100 text-red-500 py-1 px-3 rounded-lg relative cursor-pointer"
           onMouseEnter={() => setHoveredStatus(true)}
@@ -45,8 +48,9 @@ const ProjectCard = ({description}) => {
       </div>
 
       {/* Description */}
-      <p className="text-gray-600 mb-4 text-justify tracking-[-2px]">{description}</p>
-
+          <Link to={to}>
+            <p className="text-gray-600 mb-4 text-justify tracking-[-2px]">{description}</p>
+          </Link>
       {/* Footer with date, avatars, and issues */}
       <div className="flex items-center">
         {/* Date */}
@@ -105,6 +109,8 @@ const ProjectCard = ({description}) => {
 // Define propTypes to validate props
 ProjectCard.propTypes = {
   description: PropTypes.string.isRequired, // Mark 'description' as a required string
+  to: PropTypes.string.isRequired, // Mark 'description' as a required string
+  move: PropTypes.string.isRequired, // Mark 'description' as a required string
 };
 
 
