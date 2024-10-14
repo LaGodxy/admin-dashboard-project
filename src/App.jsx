@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import Tasks from './pages/Tasks';
 import ProjectAddodle from './pages/ProjectAddodle';
+import ProjectAddodle2 from './pages/ProjectAddodle2';
 import ProfileFew from './pages/ProfileFew';
 import TasksAddodle from './pages/TasksAddodle';
 import TasksSubtasks from './pages/TasksSubtasks';
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/project-addodle',
         element: <ProjectAddodle />
+      },
+      {
+        path: '/dashboard/project-addodle-2',
+        element: <ProjectAddodle2 />
       },
       {
         path: '/dashboard/tasksaddodle',
