@@ -135,7 +135,11 @@ const ProjectAddodle = () => {
                 <span className="px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">OnTrack</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center sm:space-x-4 mt-4 sm:mt-0 md:flex-row">
+            <div className="flex">
+              <button className="px-4 py-[1px] bg-[#036EFF] text-white rounded-md hover:bg-blue-300">
+                Assign Task
+              </button>
+              <div className="flex flex-col sm:flex-row items-center sm:space-x-4 mt-4 sm:mt-0 md:flex-row">
               <div className="flex flex-col items-center space-y-1 sm:space-y-0 sm:space-x-2">
                 <p className="text-gray-700 text-sm">Time spent</p>
                 <span className="flex font-bold px-2 py-1 bg-green-100 text-green-600 text-xs sm:text-sm rounded-full">
@@ -148,6 +152,7 @@ const ProjectAddodle = () => {
                   <img src={clockLoader} alt="Clock" className="mr-1" /> 6M : 0W : 0D
                 </span>
               </div>
+            </div>
             </div>
           </div>
         </div>
