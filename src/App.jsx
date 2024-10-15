@@ -5,6 +5,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Project from './pages/Project';
+import Project2 from './pages/Project2';
 import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import Tasks from './pages/Tasks';

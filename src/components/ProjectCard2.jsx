@@ -5,7 +5,6 @@ import adoddle1 from "../assets/images/adoddle1.svg";
 import adoddle2 from "../assets/images/adoddle2.svg";
 import adoddle3 from "../assets/images/adoddle3.svg";
 import adoddle4 from "../assets/images/adoddle4.svg";
-import hourglass from "../assets/icons/hourglass.svg";
 import issuesIcon from "../assets/icons/issuesIcon.svg";
 
 const ProjectCard = ({description, to, move}) => {
@@ -30,13 +29,13 @@ const ProjectCard = ({description, to, move}) => {
           </h2>
         </Link>
         <span
-          className="text-sm bg-red-100 text-red-500 py-1 px-3 rounded-lg relative cursor-pointer font-inter"
+          className="text-sm bg-[#aee4c4] text-[#21BD1E] py-1 px-3 rounded-lg relative cursor-pointer font-inter"
           onMouseEnter={() => setHoveredStatus(true)}
           onMouseLeave={() => setHoveredStatus(false)}
         >
           Completed
           {hoveredStatus && (
-            <div className="absolute right-0 top-8 bg-[#83C29D] text-[#21BD1E] text-xs rounded-lg py-1 px-2">
+            <div className="absolute right-0 top-8 bg-[#9ec7ae] text-white text-xs rounded-lg py-1 px-2">
               Project is currently Completed.
             </div>
           )}
@@ -92,7 +91,7 @@ const ProjectCard = ({description, to, move}) => {
           14 issues
           {hoveredIssues && (
             <div className="absolute left-0 bottom-8 bg-red-300 text-white text-xs rounded-lg py-1 px-2">
-              es
+              There are 14 issues currently.
             </div>
           )}
         </div>
