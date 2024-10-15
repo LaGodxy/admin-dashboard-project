@@ -47,17 +47,17 @@ export default function Login() {
         </div>
 
         {/* Left Section - Form */}
-        <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 w-[50%]">
+        <div className="flex flex-1 flex-col justify-center px-6 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 w-[50%]">
           <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div className="absolute top-5 left-[60%] p-4 flex items-center">
+            <div className="absolute top-0 left-[60%] p-4 flex items-center sm:hidden lg:flex md:hidden">
               <img alt="signin icon" src={signinIcon} className="w-[20px] h-[20px]" />
-              <p className="ml-2 font-manrope">Asite Product System</p>
+              <p className="ml-2 font-manrope whitespace-nowrap sm:mr-4">Asite Product System</p>
             </div>
 
             <h2 className="mt-20 text-2xl font-bold leading-9 tracking-tight text-gray-900 flex items-start font-manrope">
               Welcome back, Yash
             </h2>
-            <p className="text-sm leading-9 tracking-tight text-gray-300 flex items-start font-spaceGrotesk">
+            <p className="text-sm leading-9 tracking-tight text-gray-700 flex items-start font-spaceGrotesk">
               Welcome back! Please enter your details
             </p>
 
@@ -70,14 +70,15 @@ export default function Login() {
                 <Form className="space-y-6 mt-10">
                   {/* Email Field */}
                   <div>
-                    <Field
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Email"
-                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0 font-spaceGrotesk"
-                    />
-                    <ErrorMessage name="email" component="div" className="text-red-600 text-sm mt-1" />
+                  <Field
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none border-0 border-b-2 border-gray-300 focus:border-b-indigo-600 sm:text-sm sm:leading-6 font-spaceGrotesk"
+                  />
+                  <ErrorMessage name="email" component="div" className="text-red-600 text-sm mt-1" />
+
                   </div>
 
                   {/* Password Field */}
@@ -87,7 +88,7 @@ export default function Login() {
                       name="password"
                       type="password"
                       placeholder="Password"
-                      className="block w-full border-b-2 border-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 sm:text-sm sm:leading-6 border-t-0 border-l-0 border-r-0 font-spaceGrotesk"
+                      className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none border-0 border-b-2 border-gray-300 focus:border-b-indigo-600 sm:text-sm sm:leading-6 font-spaceGrotesk"
                     />
                     <ErrorMessage name="password" component="div" className="text-red-600 text-sm mt-1" />
                   </div>
