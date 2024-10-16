@@ -13,11 +13,25 @@ import light from "../assets/icons/light.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
+import TaskModal from "../components/TaskModal";
+
 
 const ProjectAddodle = () => {
   const routesForAddodle = ['/dashboard/project-addodle', '/dashboard/performance', '/dashboard/tasksaddodle'];
 
   const [hoveredAvatar, setHoveredAvatar] = useState(null);
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
+
 
   const tasks = [
     {
@@ -167,7 +181,7 @@ const ProjectAddodle = () => {
         <div className="bg-white rounded-lg shadow-md p-6 mb-12 overflow-x-hidden md:overflow-x-auto">
           <div className="w-full sm:min-w-[900px]">
             {tasks.map((task) => (
-              <div key={task.id} className="flex items-center space-x-4 mb-4">
+              <div key={task.id} onClick={handleOpenModal} className="flex items-center space-x-4 mb-4 cursor-pointer">
                 <input
                   type="checkbox"
                   className="form-checkbox h-5 w-5 text-[#85C5A2]"
@@ -248,6 +262,7 @@ const ProjectAddodle = () => {
       <div className="mt-8">
          <Pagination routes={routesForAddodle}/>
       </div>
+      {isModalOpen && <TaskModal onClose={handleModalClose}/>}
     </div>
   );
 };

@@ -2,8 +2,13 @@ import addodleAvatar from "../assets/images/addodleAvatar.svg";
 import comments from "../assets/icons/Comments.svg";
 import clockLoader from "../assets/icons/clockLoader.svg";
 import light from "../assets/icons/light.svg";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const TasksSubtasks = () => {
+  const navigate = useNavigate(); 
+
   const tasks = [
     {
       id: 1,
@@ -39,6 +44,11 @@ const TasksSubtasks = () => {
       avatar: addodleAvatar,
     },
   ];
+
+  const handleCardClick = () =>{
+    navigate('/dashboard/project-addodle');
+  }
+
 
   return (
     <div className="p-4 sm:p-6 h-screen">
@@ -100,7 +110,7 @@ const TasksSubtasks = () => {
                   </div>
                 </div>
               ) : (
-                <div key={task.id}>
+                <div key={task.id} onClick={() => handleCardClick(task.id)} className="cursor-pointer">
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="flex flex-col sm:flex-row bg-white rounded-lg shadow-xl p-4 w-full justify-between items-start sm:items-center">
                       <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">

@@ -13,9 +13,13 @@ import light from "../assets/icons/light.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const ProjectAddodle2 = () => {
   const [hoveredAvatar, setHoveredAvatar] = useState(null);
+  const navigate = useNavigate(); 
+
 
   const tasks = [
     {
@@ -93,6 +97,10 @@ const ProjectAddodle2 = () => {
     { id: 3, name: "Sam Wilson", image: adoddle3 },
     { id: 4, name: "Chris Evans", image: adoddle4 },
   ];
+
+  const handleCardClick = () =>{
+    navigate('/dashboard/tasks-subtasks');
+  }
 
   return (
     <div className="p-4 sm:p-6 h-screen">
@@ -172,7 +180,7 @@ const ProjectAddodle2 = () => {
         <div className="bg-white rounded-lg shadow-md p-6 mb-12 overflow-x-hidden md:overflow-x-auto">
           <div className="w-full sm:min-w-[900px]">
             {tasks.map((task) => (
-              <div key={task.id} className="flex items-center space-x-4 mb-4">
+              <div key={task.id} onClick={() => handleCardClick(task.id)} className="flex items-center space-x-4 mb-4 cursor-pointer">
                 <div className="flex flex-col sm:flex-row bg-white rounded-lg shadow-xl p-4 w-full justify-between items-start sm:items-center">
                   <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <div className="flex items-center">
