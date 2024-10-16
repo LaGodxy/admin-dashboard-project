@@ -109,7 +109,7 @@ const Sidebar = () => {
                   activeItem === "workLogs" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/dashboard" className="inline-flex items-center">
+                <Link to="/dashboard/subtaskform" className="inline-flex items-center">
                   <img src={workLogsIcon} alt="Work Logs Icon" />
                   <span>Work Logs</span>
                 </Link>
@@ -135,7 +135,7 @@ const Sidebar = () => {
                   activeItem === "settings" ? "bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]" : "hover:bg-[#F0F6FF] rounded-lg py-[2px] mx-[10px]"
                 }`}
               >
-                <Link to="/" className="inline-flex items-center">
+                <Link to="/dashboard/profile" className="inline-flex items-center">
                   <img src={settingsIcon} alt="Settings Icon" />
                   <span>Settings</span>
                 </Link>
