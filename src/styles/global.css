@@ -1,0 +1,8 @@
+/* Remove background color from autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important; /* Adjust to your input background color */
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important; /* Adjust to your text color */
+}

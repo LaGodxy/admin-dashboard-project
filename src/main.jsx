@@ -6,6 +6,7 @@ import '@fontsource/nunito';
 import '@fontsource/roboto';
 import '@fontsource/montserrat';
 import '@fontsource/open-sans';
+import './styles/global.css';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'

@@ -36,13 +36,13 @@ export default function Login() {
     terms: Yup.boolean().oneOf([true], "You must accept the Terms & Conditions"),
   });
 
-  // Submit handler
+    {/* Submit handler */}
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    // Simulate login
+    {/* Simulate login */}
     setSubmitting(false);
     resetForm();
     
-    // Navigate to dashboard after successful sign-in
+    {/* Navigate to dashboard after successful sign-in */}
     navigate("/dashboard");
   };
 
@@ -67,13 +67,12 @@ export default function Login() {
         {/* Right Section - Form */}
         <div className="flex flex-1 flex-col justify-center items-center px-6 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 w-[50%]">
           <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div className="absolute top-0 left-[60%] p-4 flex items-center sm:hidden lg:flex md:hidden">
+            <div className="absolute top-0 left-[59%] p-4 hidden lg:flex items-center">
               <img alt="signin icon" src={signinIcon} className="w-[20px] h-[20px]" />
               <p className="ml-2 font-manrope whitespace-nowrap">
                 Asite Product System
               </p>
             </div>
-
             <h2 className="mt-20 text-2xl font-bold leading-9 tracking-tight text-gray-900 flex items-start font-manrope">
               Welcome back, Yash
             </h2>
