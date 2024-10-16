@@ -12,8 +12,11 @@ import clockLoader from "../assets/icons/clockLoader.svg";
 import light from "../assets/icons/light.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useState } from "react";
+import Pagination from "../components/Pagination";
 
 const ProjectAddodle = () => {
+  const routesForAddodle = ['/dashboard/project-addodle', '/dashboard/performance', '/dashboard/tasksaddodle'];
+
   const [hoveredAvatar, setHoveredAvatar] = useState(null);
 
   const tasks = [
@@ -241,6 +244,9 @@ const ProjectAddodle = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="mt-8">
+         <Pagination routes={routesForAddodle}/>
       </div>
     </div>
   );

@@ -15,6 +15,8 @@ import Group24 from "../assets/images/Group24.svg";
 import Group25 from "../assets/images/Group25.svg";
 import Group26 from "../assets/images/Group26.svg";
 import Group27 from "../assets/images/Group27.svg";
+import Pagination from "../components/Pagination";
+
 
 
 
@@ -43,6 +45,7 @@ const developers = [
     
   ];
 const ProjectsStats = () => {
+    const routesForProjectStats = ['/dashboard/projects-stats', '/dashboard/project', '/dashboard/project-completed'];
     return (
         <>
             <div className="h-screen p-4 md:p-8">
@@ -59,7 +62,7 @@ const ProjectsStats = () => {
                     </div>
                     
                     {/* Right Side Projects & Developer Info (1 column) */}
-                    <div className="lg:col-span-1">
+                    <div className="lg:col-span-1 h-full">
                       <ProjectSec/>
                     </div>
 
@@ -79,6 +82,10 @@ const ProjectsStats = () => {
                         ))}
                         </div>
                     </div>
+                </div>
+
+                <div className="mt-8">
+                    <Pagination routes={routesForProjectStats}/>
                 </div>
             </div>
         </>

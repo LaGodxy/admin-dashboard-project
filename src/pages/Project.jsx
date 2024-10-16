@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import ProjectCard from "../components/ProjectCard"
+import ProjectCard from "../components/ProjectCard";
+import Pagination from "../components/Pagination";
+
 
 const descriptionOne = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea commodo consequat."
 const descriptionTwo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -9,6 +11,8 @@ const descriptionFive = "Lorem ipsum dolor sit amet, consectetur adipiscing elit
 const descriptionSix = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 
 const Project = () => {
+  const routesForProject = ['/dashboard/project', '/dashboard/project-completed', '/dashboard/projects-stats'];
+
   return (
     <>
       <div className="container px-4 sm:px-6 lg:px-8">
@@ -28,6 +32,10 @@ const Project = () => {
             <ProjectCard description={descriptionFive} to="/dashboard" move="/dashboard/create-project" />
             <ProjectCard description={descriptionSix} to="/dashboard" move="/dashboard/create-project" />
           </div>
+
+          <div className="mt-8">
+             <Pagination routes={routesForProject}/>
+           </div>
         </div>
     </>
   )

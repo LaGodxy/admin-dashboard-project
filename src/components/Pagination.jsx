@@ -1,29 +1,29 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Import PropTypes
 
 const Pagination = ({ routes }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = routes.length; 
+  const totalPages = routes.length;
   const navigate = useNavigate();
 
   const handleClick = (page) => {
     setCurrentPage(page);
-    navigate(routes[page - 1]); 
+    navigate(routes[page - 1]);
   };
 
   return (
     <div className="flex justify-center items-center py-4 space-x-4">
       {/* Previous button */}
-        <button
+      <button
         className={`px-4 py-2 rounded-lg text-sm font-medium text-gray-500 ${
-            currentPage === 1 ? 'cursor-not-allowed' : 'hover:text-blue-600'
-        }`}  
+          currentPage === 1 ? 'cursor-not-allowed' : 'hover:text-blue-600'
+        }`}
         onClick={() => handleClick(currentPage - 1)}
         disabled={currentPage === 1}
-        >
+      >
         Previous
-        </button>
-
+      </button>
 
       {/* Pagination buttons */}
       {routes.map((_, index) => {
@@ -45,7 +45,9 @@ const Pagination = ({ routes }) => {
 
       {/* Next button */}
       <button
-        className={`px-4 py-2 rounded-lg text-sm font-medium text-gray-500 ${currentPage === totalPages ? 'cursor-not-allowed' : 'hover:text-blue-600'}`}
+        className={`px-4 py-2 rounded-lg text-sm font-medium text-gray-500 ${
+          currentPage === totalPages ? 'cursor-not-allowed' : 'hover:text-blue-600'
+        }`}
         onClick={() => handleClick(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
@@ -53,6 +55,11 @@ const Pagination = ({ routes }) => {
       </button>
     </div>
   );
+};
+
+// Define propTypes for the component
+Pagination.propTypes = {
+  routes: PropTypes.arrayOf(PropTypes.string).isRequired, // Make sure routes is an array of strings
 };
 
 export default Pagination;

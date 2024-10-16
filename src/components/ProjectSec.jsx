@@ -34,7 +34,7 @@ const CreateTasks = () => {
    };
   
     return (
-        <div className="bg-white p-6 rounded-lg shadow-lg col-span-1">
+        <div className="bg-white p-6 rounded-lg shadow-lg col-span-1 h-full">
           <div className="mb-6">
             <div className="flex justify-between">
               <h3 className="text-lg font-semibold">Projects</h3>

@@ -22,7 +22,7 @@ const dataThisYear = [
   { name: 'Pending', value: 500 },
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#625ED7', '#238899', '#D32C20', '#1464BF'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {

@@ -3,8 +3,12 @@ import comments from "../assets/icons/Comments.svg";
 import Tasks from "../assets/icons/Tasks.svg";
 import clockLoader from "../assets/icons/clockLoader.svg";
 import light from "../assets/icons/light.svg";
+import Pagination from "../components/Pagination";
+
 
 const TasksAddodle = () => {
+  const routesForTasks = ['/dashboard/tasksaddodle', '/dashboard/project-addodle', '/dashboard/performance'];
+
   const tasks = [
     {
       id: 1,
@@ -169,6 +173,10 @@ const TasksAddodle = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="mt-8">
+         <Pagination routes={routesForTasks}/>
       </div>
     </div>
   );

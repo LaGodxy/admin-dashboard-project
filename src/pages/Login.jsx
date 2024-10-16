@@ -48,7 +48,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="flex h-screen flex-1 overflow-hidden">
+      <div className="flex h-screen flex-1 overflow-hidden  max-w-[1200px] mx-auto">
         {/* Top Left Logo - AProjectO */}
         <div className="absolute top-0 left-0 p-4 flex items-center">
           <img alt="logo" src={navlogo} className="w-[40px] h-[40px]" />

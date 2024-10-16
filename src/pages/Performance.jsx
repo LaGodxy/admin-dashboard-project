@@ -3,6 +3,7 @@ import comments from "../assets/icons/Comments.svg";
 import light from "../assets/icons/light.svg";
 import PerformanceCard from "../components/PerformanceCard";
 import LogCard from "../components/LogCard";
+import Pagination from "../components/Pagination";
 
 const tasks = [
   {
@@ -26,6 +27,8 @@ const tasks = [
 ];
 
 const Performance = () => {
+  const routesForPerformance = ['/dashboard/performance', '/dashboard/project-addodle', '/dashboard/tasksaddodle'];
+
   return (
     <>
       <div className="h-screen p-4 md:p-8">
@@ -78,6 +81,10 @@ const Performance = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-8">
+          <Pagination routes={routesForPerformance}/>
         </div>
       </div>
     </>
