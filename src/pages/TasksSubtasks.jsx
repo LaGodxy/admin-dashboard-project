@@ -44,10 +44,17 @@ const TasksSubtasks = () => {
     <div className="p-4 sm:p-6 h-screen">
       <div className="">
         {/* Breadcrumb and Project Header */}
-        <div className="mb-6">
+        <div className="mb-6 flex justify-between">
           <p className="text-gray-500 mt-2 text-xs sm:text-sm font-nunito">
-            Tasks/Subtasks
+            Tasks/Make an automatic payment system that enables the design
           </p>
+          <div>
+          <Link to="/dashboard/create-tasks">
+                <button className="px-4 py-2 bg-[#036EFF] text-white rounded-md hover:bg-blue-300 font-inter">
+                  Assign Sub task
+                </button>
+              </Link>
+          </div>
         </div>
 
         {/* Task Container */}
