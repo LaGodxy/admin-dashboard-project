@@ -1,3 +1,5 @@
+import WorkLogCard from "../components/WorkLogCard";
+
 const Notification = () => {
     return (
       <div className="h-screen bg-gray-100 p-6 flex flex-col lg:flex-row gap-6">
@@ -16,11 +18,12 @@ const Notification = () => {
         </div>
   
         {/* Right Section: WorkLog Summary and Notifications */}
-        <div className="w-full lg:w-1/3 flex flex-col space-y-6">
+        <div className="">
           {/* Total Work Log */}
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="bg-wh p-6">
             <h3 className="text-lg font-semibold text-gray-700 mb-4">Total WorkLog</h3>
-            {/* Placeholder for circular progress */}
+            <WorkLogCard />
+            
            
           </div>
   
