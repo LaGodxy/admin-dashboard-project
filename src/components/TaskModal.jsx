@@ -87,12 +87,12 @@ const TaskModal = ({onClose}) => {
                   </span>
                 </div>
                   {/* Owner and Assignee */}
-              <div className="flex items-center space-x-6">
+              <div className="flex items-center space-x-16">
                 <div className='flex'>
                 <img src={owner} alt="icon" />
                 <span className="font-semibold text-gray-600">Owner</span>
                 </div>
-                  <div className="flex items-center space-x-2 mt-1 ml-28">
+                  <div className="flex items-center space-x-2 mt-1">
                     <img
                       src={userAvatar}
                       alt="owner"
@@ -101,7 +101,7 @@ const TaskModal = ({onClose}) => {
                     <span className="text-gray-800">Lil Sharks</span>
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex items-center space-x-12">
                  <div className='flex'>
                  <img src={assigne} alt="icon" />
                  <span className="font-semibold text-gray-600">Assignee</span>
@@ -123,7 +123,7 @@ const TaskModal = ({onClose}) => {
               
 
               {/* Due Date */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-12 ml-4">
                 <div className='flex'>
                 <img src={dueDate} alt="icon" />
                 <span className="font-semibold text-gray-600">Due Date</span>
@@ -133,14 +133,16 @@ const TaskModal = ({onClose}) => {
 
               {/* Attachments */}
               <div className="space-y-2 border-t-gray-300 border-b-gray-300 border-b-2 border-t-2 border-l-0 border-r-0 pt-8 pb-8">
-                <span className="font-semibold text-gray-600">Attachments:</span>
+                <span className="font-semibold text-gray-600">Attachments</span>
                 <div className="flex items-center space-x-2 text-blue-600">
-                  <img src={documentLinks} alt="icon"  className="w-5 h-5 mt-8" />
+                  <img src={documentLinks} alt="icon"  className="" />
                   <span>Document Links</span>
                 </div>
                 <button className="flex items-center space-x-1">
+                  <span className='flex items-center'>
                   <img src={addAttachment} alt="icon"  className="w-5 h-5 mt-8" />
-                  <span>+ Add Attachment</span>
+                  <span>Add Attachment</span>
+                  </span>
                 </button>
               </div>
 
