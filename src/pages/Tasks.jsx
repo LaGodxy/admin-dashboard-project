@@ -248,7 +248,19 @@ const Tasks = () => {
         </div>
       </DragDropContext>
 
-      <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
+      <Modal 
+        isOpen={isModalOpen} 
+        onRequestClose={() => setIsModalOpen(false)} 
+        style={{
+          content: {
+            maxWidth: '600px', // Limit the width
+            maxHeight: '80vh', // Limit the height
+            margin: 'auto', // Center the modal
+            overflowY: 'auto', // Enable vertical scrolling
+            padding: '20px', // Add padding for content readability
+          },
+        }}
+      >
         <div>
           <h2>Add New Task</h2>
           <input
@@ -266,6 +278,7 @@ const Tasks = () => {
           <button onClick={handleAddTask}>Add Task</button>
         </div>
       </Modal>
+
       </div>
       </div>
     </>
