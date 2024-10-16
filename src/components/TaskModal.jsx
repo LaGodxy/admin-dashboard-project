@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import userAvatar from "../assets/icons/userAvatar.svg";
-import addAttachment from "../assets/icons/addAttachment.svg";
+import addAttachments from "../assets/icons/addAttachments.svg";
 import documentLinks from "../assets/icons/documentLinks.svg";
 import dueDate from "../assets/icons/dueDate.svg";
 import assigne from "../assets/icons/assigne.svg";
@@ -116,11 +116,7 @@ const TaskModal = ({onClose}) => {
                   </div>
                 </div>
                 
-              </div>
-
-            
-                
-              
+              </div>         
 
               {/* Due Date */}
               <div className="flex items-center space-x-12 ml-4">
@@ -138,12 +134,10 @@ const TaskModal = ({onClose}) => {
                   <img src={documentLinks} alt="icon"  className="" />
                   <span>Document Links</span>
                 </div>
-                <button className="flex items-center space-x-1">
-                  <span className='flex items-center'>
-                  <img src={addAttachment} alt="icon"  className="w-5 h-5 mt-8" />
+                <div className="flex items-center space-x-2">
+                  <img src={addAttachments} alt="icon"  className="" />
                   <span>Add Attachment</span>
-                  </span>
-                </button>
+                </div>
               </div>
 
               {/* Description */}
