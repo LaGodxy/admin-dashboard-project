@@ -39,7 +39,7 @@ const WorkLogCard = ({ selectedPeriod, onPeriodChange, data, stats }) => {
       <div className="flex justify-between items-center w-full mb-4">
         <h2 className="text-xs font-semibold mr-16 whitespace-nowrap">Total work done</h2>
         <select
-          className="bg-blue-50 text-blue-600 text-sm py-1 px-2 rounded-lg cursor-pointer outline-none "
+          className="bg-blue-50 text-blue-600 text-[10px] py-1 rounded-lg cursor-pointer outline-none "
           value={selectedPeriod}
           onChange={(e) => onPeriodChange(e.target.value)} // Pass the selected value back to the parent
         >
