@@ -12,7 +12,7 @@ const EditProfile = () => {
         {/* Profile Card */}
         <div className="flex flex-col">
           <ProfileCard/>
-          <div className="mt-4 mr-4 mb-8">
+          <div className="mt-48 mb-8">
             <WorkLogCard/>
           </div>
         </div>
