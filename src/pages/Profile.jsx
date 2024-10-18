@@ -93,7 +93,7 @@ const Profile = () => {
 
       
       {/* Total Work Done Card */}
-      <div className="bg-[#F5F5F5] p-1 px-[-29px] rounded-lg shadow-md flex justify-end ml-[400px]">
+      <div className="p-1 px-[-29px] flex justify-end ml-[400px]">
            <WorkLogCard title='Total work done'/>
           </div>
     </div>

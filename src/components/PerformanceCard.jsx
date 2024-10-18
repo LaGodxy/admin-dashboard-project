@@ -53,7 +53,7 @@ const PerformanceCard = () => {
 
   return (
     <>
-     <div className="bg-white shadow-lg p-6 rounded-3xl font-nunito">
+     <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex flex-col font-nunito">
      <div className="flex justify-between items-start mb-6">
       <h4 className="text-2xl font-semibold text-gray-900 mb-2 flex items-start">Performance</h4>
         <select
@@ -69,7 +69,7 @@ const PerformanceCard = () => {
 
       {/* Line Chart */}
       <div className="">
-        <ResponsiveContainer width="100%" height={400}>
+        <ResponsiveContainer width="100%" height={265}>
           <LineChart data={getChartData()} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" horizontal="false"/>
             <XAxis dataKey="name" />

@@ -1,5 +1,5 @@
 import PerformanceCard from "../components/PerformanceCard";
-import PieChart from "../components/PieChart";
+import TasksChart from "../components/TasksChart";
 import ProjectSec from "../components/ProjectSec";
 import Group1 from "../assets/images/Group1.svg";
 import Group2 from "../assets/images/Group2.svg";
@@ -53,11 +53,11 @@ const ProjectsStats = () => {
                     
                     {/* PieChart (2 columns) */}
                     <div className="lg:col-span-2">
-                        <PieChart />
+                        <TasksChart />
                     </div>
                     
                     {/* PerformanceCard (2 columns) */}
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 h-[415px] bg-white rounded-lg shadow-lg">
                         <PerformanceCard />
                     </div>
                     

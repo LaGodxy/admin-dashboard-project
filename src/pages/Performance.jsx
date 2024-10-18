@@ -2,7 +2,7 @@ import addodleAvatar from "../assets/images/addodleAvatar.svg";
 import comments from "../assets/icons/Comments.svg";
 import light from "../assets/icons/light.svg";
 import PerformanceCard from "../components/PerformanceCard";
-import LogCard from "../components/LogCard";
+import WorkLogChart from "../components/WorkLogChart";
 import Pagination from "../components/Pagination";
 
 const tasks = [
@@ -41,7 +41,7 @@ const Performance = () => {
 
           {/* worklog */}
           <div className="lg:col-span-2">
-            <LogCard />
+            <WorkLogChart />
           </div>
         </div>
         {/* Task Container */}

@@ -1,45 +1,38 @@
 import { Link } from 'react-router-dom';
 import plantCareApp from "../assets/images/plantCareApp.svg";
-import TaskPieChart from "../components/PieChart";
+import TasksChart from "../components/TasksChart";
 import PerformanceCard from "../components/PerformanceCard";
-import LogCard from "../components/LogCard";
+import WorkLogChart from "../components/WorkLogChart";
 
 export default function Dashboard() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 font-nunito">
-      <div className="py-2">
-        <h1 className="text-2xl font-semibold text-gray-900 mb-6 flex items-start">Dashboard</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="bg-white shadow rounded-3xl md:col-span-2 md:h-full sm:h-full sm:col-span-2 lg:col-span-1 p-2">
-            <h4 className="text-2xl font-semibold text-gray-900 mb-2 flex items-start h-fit">Projects</h4>
-            <Link to="/dashboard/project">
-              <img src={plantCareApp} alt="plantCareApp" className="flex items-center" />
+    <div className="p-4 md:p-8 lg:p-12">
+    <h1 className="text-xl font-bold mb-6">Dashboard</h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-lg font-semibold mb-4">Projects</h2>
+        <div className="flex gap-4">
+          <div className="bg-gray-100 p-2 rounded-lg shadow-sm">
+          <Link to="/dashboard/project">
+            <img src={plantCareApp} alt="Project" className="w-full h-auto object-cover rounded-md" />
             </Link>
           </div>
-          
-          <div className="col-span-2">
-            <Link to="/dashboard/project">
-              <TaskPieChart/>
-            </Link>
-          </div>
-          
-          {/* Card 3 */}
-          <div className="p-2 mt-0 md:col-span-2 sm:col-span-2 lg:col-span-1">
-            <Link to="/dashboard/notification">
-              <LogCard /> 
-            </Link>
-            
-          </div>
-          {/* Card 4 */}
-          <div className="p-2 col-span-2 md:h-full sm:h-full">
-          <Link to="/dashboard/performance">
-            <PerformanceCard/>
-          </Link>
-          
-          </div>
-          {/* Add more cards as needed */}
         </div>
       </div>
+      <Link to="/dashboard/project">
+        <TasksChart />
+      </Link>
+
+      <Link to="/dashboard/notification">
+        <WorkLogChart />
+      </Link>
+
+      <Link to="/dashboard/performance">
+        <PerformanceCard />
+      </Link>
+
     </div>
+  </div>
+   
   );
 }

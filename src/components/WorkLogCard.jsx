@@ -1,12 +1,34 @@
+import { useState } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { motion } from "framer-motion";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
+// Parent Component that handles the state for the select
+const ParentComponent = () => {
+  const [selectedPeriod, setSelectedPeriod] = useState('This Week');
 
-const WorkLogCard = () => {
-  const value = 75; // Assuming 75% completion as shown in the circle
+  // Dummy data for each period
+  const data = {
+    "This Week": { value: 75, label: "5w: 2d" },
+    "This Month": { value: 60, label: "20w: 10d" },
+    "This Year": { value: 90, label: "240w: 180d" },
+  };
 
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <WorkLogCard
+        title="Tasks"
+        selectedPeriod={selectedPeriod}
+        onPeriodChange={setSelectedPeriod}
+        data={data[selectedPeriod]}
+      />
+    </div>
+  );
+};
+
+// WorkLogCard Component
+const WorkLogCard = ({ title, selectedPeriod, onPeriodChange, data }) => {
   return (
     <motion.div
       className="bg-white rounded-lg shadow-lg p-6 w-60 relative"
@@ -14,31 +36,24 @@ const WorkLogCard = () => {
       transition={{ type: "spring", stiffness: 300 }}
     >
       {/* Header with Title */}
-      <div className="flex justify-between items-start mb-4">
-        <h2 className="text-lg font-semibold">title</h2>
-        <button className="text-gray-500 hover:text-gray-700">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 12h12m-6 6v-12"
-            />
-          </svg>
-        </button>
+      <div className="flex justify-between items-center w-full mb-4">
+        <h2 className="text-lg font-semibold mr-10">{title}</h2>
+        <select
+          className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-lg cursor-pointer outline-none mr-8"
+          value={selectedPeriod}
+          onChange={(e) => onPeriodChange(e.target.value)} // Pass the selected value back to the parent
+        >
+          <option>This Week</option>
+          <option>This Month</option>
+          <option>This Year</option>
+        </select>
       </div>
 
       {/* Circular Progress Bar */}
       <div className="flex justify-center mb-4">
         <CircularProgressbar
-          value={value}
-          text={"5w: 2d"}
+          value={data.value} // Value based on selected period
+          text={data.label} // Label based on selected period
           styles={buildStyles({
             pathColor: "#3b82f6", // Blue color for progress
             textColor: "#000000", // Text color for the middle value
@@ -55,9 +70,14 @@ const WorkLogCard = () => {
   );
 };
 
-// Define propTypes to validate props
-// WorkLogCard.propTypes = {
-//   description: PropTypes.string.isRequired, // Mark 'description' as a required string
-// };
+WorkLogCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  selectedPeriod: PropTypes.string.isRequired,
+  onPeriodChange: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    value: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
-export default WorkLogCard;
+export default ParentComponent;
