@@ -16,7 +16,7 @@ const ParentComponent = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen mt-[-340px]">
       <WorkLogCard
         title="Tasks"
         selectedPeriod={selectedPeriod}
@@ -28,7 +28,7 @@ const ParentComponent = () => {
 };
 
 // WorkLogCard Component
-const WorkLogCard = ({ title, selectedPeriod, onPeriodChange, data }) => {
+const WorkLogCard = ({ selectedPeriod, onPeriodChange, data, stats }) => {
   return (
     <motion.div
       className="bg-white rounded-lg shadow-lg p-6 w-60 relative"
@@ -37,9 +37,9 @@ const WorkLogCard = ({ title, selectedPeriod, onPeriodChange, data }) => {
     >
       {/* Header with Title */}
       <div className="flex justify-between items-center w-full mb-4">
-        <h2 className="text-lg font-semibold mr-10">{title}</h2>
+        <h2 className="text-xs font-semibold mr-16 whitespace-nowrap">Total work done</h2>
         <select
-          className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-lg cursor-pointer outline-none mr-8"
+          className="bg-blue-50 text-blue-600 text-sm py-1 px-2 rounded-lg cursor-pointer outline-none "
           value={selectedPeriod}
           onChange={(e) => onPeriodChange(e.target.value)} // Pass the selected value back to the parent
         >
@@ -64,14 +64,14 @@ const WorkLogCard = ({ title, selectedPeriod, onPeriodChange, data }) => {
 
       {/* Statistics Label */}
       <div className="text-center text-gray-500">
-        <p>stats</p>
+        <p>{stats}</p>
       </div>
     </motion.div>
   );
 };
 
 WorkLogCard.propTypes = {
-  title: PropTypes.string.isRequired,
+  stats: PropTypes.string.isRequired,
   selectedPeriod: PropTypes.string.isRequired,
   onPeriodChange: PropTypes.func.isRequired,
   data: PropTypes.shape({

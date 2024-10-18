@@ -78,7 +78,7 @@ const ProfileFew = () => {
         </div>
 
         {/* Center Profile Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg lg:col-span-2">
+        <div className="bg-white p-6 rounded-lg shadow-lg lg:col-span-2 h-[780px]">
           <p className="text-sm mb-4">Inicio Profile</p>
           <h3 className="text-2xl font-bold mb-4">UI Developer</h3>
           <p className="text-gray-600 mb-4">Lorem ipsum is the best sentence in the world of dummy text</p>
@@ -125,7 +125,7 @@ const ProfileFew = () => {
           </div>
         </div>
           
-        <div className="mt-20">
+        <div className="mt-80">
             <WorkLogCard title='Total work done'/>
         </div>
         </div>

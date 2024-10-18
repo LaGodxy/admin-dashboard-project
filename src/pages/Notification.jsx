@@ -2,7 +2,7 @@ import WorkLogCard from "../components/WorkLogCard";
 
 const Notification = () => {
     return (
-      <div className="h-screen bg-gray-100 p-6 flex flex-col lg:flex-row gap-6">
+      <div className="h-screen p-6 flex flex-col lg:flex-row gap-6">
         {/* Left Section: Work Log */}
         <div className="bg-white rounded-lg shadow-md p-6 flex-1">
           <div className="space-y-4">
@@ -20,15 +20,14 @@ const Notification = () => {
         {/* Right Section: WorkLog Summary and Notifications */}
         <div className="">
           {/* Total Work Log */}
-          <div className="bg-wh p-6">
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">Total WorkLog</h3>
-            <WorkLogCard />
+          <div className="mt-[170px]">
+            <WorkLogCard title="rrrr"/>
             
            
           </div>
   
           {/* Notifications */}
-          <div className="bg-white rounded-lg shadow-md p-6 flex-1">
+          <div className="bg-white rounded-lg shadow-md p-6 flex-1 mt-[-150px]">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-lg font-semibold text-gray-700 font-poppins">Notifications</h3>
               <button className="text-blue-500 text-xs font-poppins">View all</button>
