@@ -46,25 +46,25 @@ const LogCard = () => {
 
   const renderCustomLegend = () => {
     return (
-      <div className="flex flex-col gap-2">
-        <div className="flex gap-4">
+      <div className="flex flex-col gap-2 md:gap-4 lg:gap-2">
+        <div className="flex flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <span className="bg-[#ff6384] rounded-full w-2 h-2"></span>
-            <span className='text-xs whitespace-nowrap'>Product 1</span>
+            <span className='text-xs md:text-sm whitespace-nowrap'>Product 1</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="bg-[#36a2eb] rounded-full w-2 h-2"></span>
-            <span className='text-xs whitespace-nowrap'>Product 2</span>
+            <span className='text-xs md:text-sm whitespace-nowrap'>Product 2</span>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <div className="flex items-center gap-2">
             <span className="bg-[#4bc0c0] rounded-full w-2 h-2"></span>
-            <span className='text-xs whitespace-nowrap'>Product 4</span>
+            <span className='text-xs md:text-sm whitespace-nowrap'>Product 4</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="bg-[#9966ff] rounded-full w-2 h-2"></span>
-            <span className='text-xs whitespace-nowrap'>Product 5</span>
+            <span className='text-xs md:text-sm whitespace-nowrap'>Product 5</span>
           </div>
         </div>
       </div>
@@ -86,17 +86,17 @@ const LogCard = () => {
             <option>This Year</option>
           </select>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center">
+        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center lg:justify-between lg:items-start">
           {/* Pie chart on the left */}
           <div className="flex-shrink-0">
-            <PieChart width={200} height={200} className="md:w-[300px] md:h-[300px]">
+            <PieChart width={200} height={200} className="md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px]">
               <Pie
                 data={getChartData()}
                 dataKey="value"
                 nameKey="name"
                 cx="50%"
                 cy="50%"
-                outerRadius={80}
+                outerRadius={90} // Adjusted for better layout
                 innerRadius={50}
                 fill="#8884d8"
               >
@@ -108,7 +108,7 @@ const LogCard = () => {
           </div>
 
           {/* Custom Legend on the right */}
-          <div className="mt-4 md:mt-0 md:ml-6">{renderCustomLegend()}</div>
+          <div className="mt-4 md:mt-16 md:ml-6 lg:ml-10 lg:w-auto lg:flex-shrink lg:flex-wrap">{renderCustomLegend()}</div>
         </div>
       </div>
     );
