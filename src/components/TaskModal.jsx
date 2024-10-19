@@ -112,7 +112,7 @@ const TaskModal = ({ onClose }) => {
       </div>
 
       {/* Attachments */}
-      <div className="space-y-2 border-t-gray-300 border-b-gray-300 border-b-2 border-t-2 border-l-0 border-r-0 pt-4 pb-8">
+      <div className="space-y-6 border-t-gray-300 border-b-gray-300 border-b-2 border-t-2 border-l-0 border-r-0 pt-4 pb-8">
         <span className="font-semibold text-gray-600">Attachments</span>
         <div className="flex items-center space-x-2 text-blue-600">
           <img src={documentLinks} alt="icon" />
