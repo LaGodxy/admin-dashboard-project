@@ -7,7 +7,6 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import login from "../assets/images/login.svg";
 import navlogo from "../assets/images/navlogo.svg";
 import signinIcon from "../assets/icons/signinIcon.svg";
-
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate(); 
@@ -36,19 +35,15 @@ export default function Login() {
     terms: Yup.boolean().oneOf([true], "You must accept the Terms & Conditions"),
   });
 
-    {/* Submit handler */}
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    {/* Simulate login */}
     setSubmitting(false);
     resetForm();
-    
-    {/* Navigate to dashboard after successful sign-in */}
     navigate("/dashboard");
   };
 
   return (
     <>
-      <div className="flex h-screen flex-1 overflow-hidden  max-w-[1200px] mx-auto">
+      <div className="flex flex-col lg:flex-row h-screen max-w-[1200px] mx-auto">
         {/* Top Left Logo - AProjectO */}
         <div className="absolute top-0 left-0 p-4 flex items-center">
           <img alt="logo" src={navlogo} className="w-[40px] h-[40px]" />
@@ -56,18 +51,18 @@ export default function Login() {
         </div>
 
         {/* Right Side Image */}
-        <div className="hidden w-[50%] flex-1 lg:flex items-center">
+        <div className="hidden lg:flex lg:w-[50%] flex-1 items-center justify-center">
           <img
             alt="loginImage"
             src={login}
-            className="h-full w-full object-cover ml-32 mt-32"
+            className="h-auto w-[90%] object-cover mt-16"
           />
         </div>
 
-        {/* Right Section - Form */}
-        <div className="flex flex-1 flex-col justify-center items-center px-6 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 w-[50%]">
+        {/* Form Section */}
+        <div className="flex flex-1 flex-col justify-center items-center px-6 py-12 sm:px-6 lg:w-[50%] lg:px-16 xl:px-24 w-full">
           <div className="mx-auto w-full max-w-sm lg:w-96">
-            <div className="absolute top-0 left-[59%] p-4 hidden lg:flex items-center">
+           <div className="absolute top-0 left-[53%] p-4 hidden lg:flex items-center">
               <img alt="signin icon" src={signinIcon} className="w-[20px] h-[20px]" />
               <p className="ml-2 font-manrope whitespace-nowrap">
                 Asite Product System
@@ -94,7 +89,7 @@ export default function Login() {
                       name="email"
                       type="email"
                       placeholder="Email"
-                      className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none border-0 border-gray-300 focus:border-b-indigo-600 sm:text-sm sm:leading-6 font-spaceGrotesk"
+                      className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none sm:text-sm sm:leading-6 font-spaceGrotesk"
                     />
                     <ErrorMessage
                       name="email"
@@ -110,7 +105,7 @@ export default function Login() {
                       name="password"
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none border-gray-300 focus:border-b-indigo-600 sm:text-sm sm:leading-6 font-spaceGrotesk"
+                      className="block w-full border-b-2 border-b-gray-300 focus:border-indigo-600 py-1.5 shadow-sm placeholder:text-gray-600 focus:ring-0 focus:outline-none sm:text-sm sm:leading-6 font-spaceGrotesk"
                     />
                     <ErrorMessage
                       name="password"

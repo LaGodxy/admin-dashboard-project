@@ -35,12 +35,12 @@ const Performance = () => {
         <p className="font-nunito">Performance Report</p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* PieChart (2 columns) */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 bg-white shadow-lg">
             <PerformanceCard />
           </div>
 
           {/* worklog */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 bg-white shadow-lg">
             <WorkLogChart />
           </div>
         </div>
