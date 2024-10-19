@@ -55,7 +55,7 @@ export default function TasksChart() {
   };
 
   return (
-    <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex flex-col w-full">
+    <div className="p-4 md:p-6 flex flex-col w-full">
       <div className="flex justify-between items-center w-full mb-4 px-2 sm:px-6">
         <h2 className="text-lg font-semibold">Tasks</h2>
         <select

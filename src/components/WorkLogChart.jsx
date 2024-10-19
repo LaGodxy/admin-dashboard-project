@@ -73,7 +73,7 @@ const LogCard = () => {
 
   const WorkLogChart = () => {
     return (
-      <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+      <div className="p-4 md:p-6">
         <div className="flex justify-between items-center w-full">
           <h4 className="text-lg md:text-xl font-semibold text-gray-900">Work Log</h4>
           <select
@@ -89,7 +89,7 @@ const LogCard = () => {
         <div className="flex flex-col md:flex-row flex-wrap justify-center items-center lg:justify-between lg:items-start">
           {/* Pie chart on the left */}
           <div className="flex-shrink-0">
-            <PieChart width={200} height={200} className="md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px]">
+            <PieChart width={200} height={200} className="md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-auto">
               <Pie
                 data={getChartData()}
                 dataKey="value"
