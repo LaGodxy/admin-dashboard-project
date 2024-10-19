@@ -73,8 +73,8 @@ const LogCard = () => {
 
   const WorkLogChart = () => {
     return (
-      <div className="p-4 md:p-6">
-        <div className="flex justify-between items-center w-full">
+      <div className="p-4 md:p-6 h-full flex flex-col justify-center items-center">
+        <div className="flex justify-between items-center w-full mb-4">
           <h4 className="text-lg md:text-xl font-semibold text-gray-900">Work Log</h4>
           <select
             className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-md cursor-pointer"
@@ -86,8 +86,9 @@ const LogCard = () => {
             <option>This Year</option>
           </select>
         </div>
-        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center lg:justify-between lg:items-start">
-          {/* Pie chart on the left */}
+
+        {/* Center Pie chart */}
+        <div className="flex justify-center items-center w-full">
           <div className="flex-shrink-0">
             <PieChart width={200} height={200} className="md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-auto">
               <Pie
@@ -106,10 +107,10 @@ const LogCard = () => {
               </Pie>
             </PieChart>
           </div>
-
-          {/* Custom Legend on the right */}
-          <div className="mt-4 md:mt-16 md:ml-6 lg:ml-10 lg:w-auto lg:flex-shrink lg:flex-wrap">{renderCustomLegend()}</div>
         </div>
+
+        {/* Custom Legend */}
+        <div className="mt-4 md:mt-8 flex justify-center">{renderCustomLegend()}</div>
       </div>
     );
   };

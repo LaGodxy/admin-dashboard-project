@@ -6,7 +6,7 @@ import WorkLogChart from "../components/WorkLogChart";
 
 export default function Dashboard() {
   return (
-    <div className="p-4 md:p-8 lg:p-12">
+    <div className="">
       <h1 className="text-xl font-bold mb-6">Dashboard</h1>
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
         
