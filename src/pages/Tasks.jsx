@@ -281,7 +281,7 @@ const Tasks = () => {
         />
         <button 
             onClick={handleAddTask} 
-            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700"
+            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700 mt-10 mb-10"
         >
             Add Task
         </button>
