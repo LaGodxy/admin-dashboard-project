@@ -249,35 +249,46 @@ const Tasks = () => {
       </DragDropContext>
 
       <Modal 
-        isOpen={isModalOpen} 
-        onRequestClose={() => setIsModalOpen(false)} 
-        style={{
-          content: {
+    isOpen={isModalOpen} 
+    onRequestClose={() => setIsModalOpen(false)} 
+    style={{
+        content: {
             maxWidth: '600px', // Limit the width
-            maxHeight: '80vh', // Limit the height
+            maxHeight: '40vh', // Limit the height
             margin: 'auto', // Center the modal
             overflowY: 'auto', // Enable vertical scrolling
             padding: '20px', // Add padding for content readability
-          },
-        }}
-      >
-        <div>
-          <h2>Add New Task</h2>
-          <input
+            border: '1px solid #E2E8F0', // Add a light border
+            borderRadius: '0.5rem', // Add border radius
+            backgroundColor: '#FFFFFF', // Set background color
+        },
+    }}
+>
+    <div className="flex flex-col space-y-4">
+        <h2 className="text-lg font-semibold text-gray-800">Add New Task</h2>
+        <input
             type="text"
             placeholder="Title"
             value={newTask.title}
             onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
-          />
-          <input
+            className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
+        />
+        <input
             type="text"
             placeholder="Description"
             value={newTask.description}
             onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
-          />
-          <button onClick={handleAddTask}>Add Task</button>
-        </div>
-      </Modal>
+            className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
+        />
+        <button 
+            onClick={handleAddTask} 
+            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700"
+        >
+            Add Task
+        </button>
+    </div>
+</Modal>
+
 
       </div>
       </div>
@@ -289,6 +300,7 @@ const Tasks = () => {
 // Add PropTypes validation for TaskCard props
 TaskCard.propTypes = {
   title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   comments: PropTypes.number.isRequired,
   attachments: PropTypes.number.isRequired,
