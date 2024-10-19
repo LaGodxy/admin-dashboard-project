@@ -256,15 +256,16 @@ const Tasks = () => {
             maxWidth: '600px', // Limit the width
             height: 'auto', // Auto adjust height based on content
             margin: 'auto', // Center the modal
-            overflowY: 'visible', // No vertical scrolling
-            padding: '20px 20px 0 20px', // Remove bottom padding
+            padding: '20px', // Add padding
             border: '1px solid #E2E8F0', // Add a light border
             borderRadius: '0.5rem', // Add border radius
             backgroundColor: '#FFFFFF', // Set background color
+            display: 'flex', // Enable flex to push button to bottom
+            flexDirection: 'column', // Stack content vertically
         },
     }}
 >
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col flex-grow space-y-4">
         <h2 className="text-lg font-semibold text-gray-800">Add New Task</h2>
         <input
             type="text"
@@ -280,14 +281,16 @@ const Tasks = () => {
             onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
             className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
         />
+      
         <button 
             onClick={handleAddTask} 
-            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700 mb-0" // Remove extra margin-bottom
+            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700 mt-auto"
         >
             Add Task
         </button>
     </div>
 </Modal>
+
 
 
 
