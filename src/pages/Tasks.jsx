@@ -254,16 +254,16 @@ const Tasks = () => {
     style={{
         content: {
             maxWidth: '600px', // Limit the width
+            height: 'auto', // Auto adjust height based on content
             margin: 'auto', // Center the modal
-            overflowY: 'visible', // Remove vertical scrolling
-            padding: '20px', // Add padding for content readability
+            padding: '0', // Remove default padding
             border: '1px solid #E2E8F0', // Add a light border
             borderRadius: '0.5rem', // Add border radius
             backgroundColor: '#FFFFFF', // Set background color
         },
     }}
 >
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 p-6">
         <h2 className="text-lg font-semibold text-gray-800">Add New Task</h2>
         <input
             type="text"
@@ -287,6 +287,7 @@ const Tasks = () => {
         </button>
     </div>
 </Modal>
+
 
 
 
