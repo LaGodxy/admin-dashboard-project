@@ -8,7 +8,7 @@ export default function Dashboard() {
   return (
     <div className="p-4 md:p-8 lg:p-12">
     <h1 className="text-xl font-bold mb-6">Dashboard</h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-lg font-semibold mb-4">Projects</h2>
         <div className="flex gap-4">

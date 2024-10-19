@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PieChart, Pie, Cell, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const dataThisWeek = [
   { name: 'Completed', value: 300 },
@@ -55,9 +55,9 @@ export default function TasksChart() {
   };
 
   return (
-    <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex flex-col">
-      <div className="flex justify-between items-center w-full px-8 mb-4">
-        <h2 className="text-lg font-semibold mb-4">Tasks</h2>
+    <div className="bg-white p-4 md:p-6 rounded-lg shadow-md flex flex-col w-full">
+      <div className="flex justify-between items-center w-full mb-4 px-2 sm:px-6">
+        <h2 className="text-lg font-semibold">Tasks</h2>
         <select
           className="bg-blue-50 text-blue-600 text-sm py-1 px-3 rounded-lg cursor-pointer outline-none"
           value={selectedPeriod}
@@ -68,41 +68,44 @@ export default function TasksChart() {
           <option>This Year</option>
         </select>
       </div>
-      <div className="flex justify-between items-center">
-        {/* Pie Chart with Legend */}
-        <PieChart width={400} height={300}>
-          <Pie
-            data={getChartData()}
-            dataKey="value"
-            nameKey="name"
-            cx="45%" // Adjust cx to give space for the legend
-            cy="45%"
-            outerRadius={120}
-            fill="#8884d8"
-            labelLine={false}
-            label={renderCustomizedLabel}
-          >
-            {getChartData().map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-                stroke="#fff"
-              />
-            ))}
-          </Pie>
 
-          {/* Legend inside PieChart */}
-          <Legend
-            layout="vertical"
-            align="right"
-            verticalAlign="middle"
-            iconType="square"
-            wrapperStyle={{ paddingLeft: 20 }}
-            formatter={(value, entry) => (
-              <span style={{ color: entry.color, fontSize: '12px'  }}>{value}</span>
-            )}
-          />
-        </PieChart>
+      <div className="w-full h-full flex justify-center">
+        {/* Responsive Pie Chart with Legend */}
+        <ResponsiveContainer width="100%" height={300}>
+          <PieChart>
+            <Pie
+              data={getChartData()}
+              dataKey="value"
+              nameKey="name"
+              cx="50%"
+              cy="50%"
+              outerRadius="80%"
+              fill="#8884d8"
+              labelLine={false}
+              label={renderCustomizedLabel}
+            >
+              {getChartData().map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                  stroke="#fff"
+                />
+              ))}
+            </Pie>
+
+            {/* Legend with improved spacing for small screens */}
+            <Legend
+              layout="horizontal"
+              align="center"
+              verticalAlign="bottom"
+              iconType="square"
+              wrapperStyle={{ paddingTop: 10, fontSize: '12px' }}
+              formatter={(value, entry) => (
+                <span style={{ color: entry.color }}>{value}</span>
+              )}
+            />
+          </PieChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );
