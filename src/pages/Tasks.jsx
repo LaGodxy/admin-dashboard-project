@@ -254,7 +254,7 @@ const Tasks = () => {
     style={{
         content: {
             maxWidth: '600px', // Limit the width
-            maxHeight: '80vh', // Limit the height
+            maxHeight: '50vh', // Limit the height
             margin: 'auto', // Center the modal
             overflowY: 'auto', // Enable vertical scrolling
             padding: '20px', // Add padding for content readability
