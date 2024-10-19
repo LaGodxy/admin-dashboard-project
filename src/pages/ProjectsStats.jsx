@@ -52,7 +52,7 @@ const ProjectsStats = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
                     
                     {/* PieChart (2 columns) */}
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 bg-white shadow-lg">
                         <TasksChart />
                     </div>
                     

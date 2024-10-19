@@ -47,7 +47,7 @@ const Profile = () => {
        {/* Left Profile Section */}
           <ProfileCard/>
         {/* Center Profile Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg lg:col-span-2">
+        <div className="bg-white p-6 rounded-lg shadow-lg lg:col-span-2 h-full">
           <p className="text-sm mb-4">Inicio Profile</p>
           <h3 className="text-2xl font-bold mb-4">UI Developer</h3>
           <p className="text-gray-600 mb-4">Lorem ipsum is the best sentence in the world of dummy text</p>
@@ -72,7 +72,7 @@ const Profile = () => {
         </div>
 
         {/* Right Profile Section */}
-        <ProjectSec/>
+        <ProjectSec />
       </div>
 
       {/* Person Modal */}
@@ -93,7 +93,7 @@ const Profile = () => {
 
       
       {/* Total Work Done Card */}
-      <div className="p-1 px-[-29px] flex justify-end ml-[400px]">
+      <div className="p-1 px-[-29px] flex justify-end ml-[400px] mt-52">
            <WorkLogCard title='Total work done'/>
           </div>
     </div>
