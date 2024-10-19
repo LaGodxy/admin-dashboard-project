@@ -247,16 +247,16 @@ const Tasks = () => {
           ))}
         </div>
       </DragDropContext>
-
+        
 <Modal 
     isOpen={isModalOpen} 
     onRequestClose={() => setIsModalOpen(false)} 
     style={{
         content: {
             maxWidth: '600px', // Limit the width
-            height: 'auto', // Auto adjust height based on content
+            height: '100px'
             margin: 'auto', // Center the modal
-            padding: '20px', // Add padding
+            padding: '0', // Remove padding to eliminate extra space
             border: '1px solid #E2E8F0', // Add a light border
             borderRadius: '0.5rem', // Add border radius
             backgroundColor: '#FFFFFF', // Set background color
@@ -265,31 +265,34 @@ const Tasks = () => {
         },
     }}
 >
-    <div className="flex flex-col flex-grow space-y-4">
-        <h2 className="text-lg font-semibold text-gray-800">Add New Task</h2>
-        <input
-            type="text"
-            placeholder="Title"
-            value={newTask.title}
-            onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
-            className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
-        />
-        <input
-            type="text"
-            placeholder="Description"
-            value={newTask.description}
-            onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
-            className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
-        />
+    <div className="flex flex-col h-full justify-between p-4">
+        <div className="space-y-4">
+            <h2 className="text-lg font-semibold text-gray-800">Add New Task</h2>
+            <input
+                type="text"
+                placeholder="Title"
+                value={newTask.title}
+                onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
+                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
+            />
+            <input
+                type="text"
+                placeholder="Description"
+                value={newTask.description}
+                onChange={(e) => setNewTask({ ...newTask, description: e.target.value })}
+                className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:border-blue-500"
+            />
+        </div>
       
         <button 
             onClick={handleAddTask} 
-            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700 mt-auto"
+            className="bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300 hover:bg-blue-700 w-full"
         >
             Add Task
         </button>
     </div>
 </Modal>
+
 
 
 
