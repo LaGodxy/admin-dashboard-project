@@ -248,15 +248,15 @@ const Tasks = () => {
         </div>
       </DragDropContext>
 
-      <Modal 
+<Modal 
     isOpen={isModalOpen} 
     onRequestClose={() => setIsModalOpen(false)} 
     style={{
         content: {
             maxWidth: '600px', // Limit the width
-            maxHeight: '40vh', // Limit the height
+            height: 'auto', // Auto adjust height based on content
             margin: 'auto', // Center the modal
-            overflowY: 'auto', // Enable vertical scrolling
+            overflowY: 'visible', // Remove vertical scrolling
             padding: '20px', // Add padding for content readability
             border: '1px solid #E2E8F0', // Add a light border
             borderRadius: '0.5rem', // Add border radius
@@ -288,6 +288,7 @@ const Tasks = () => {
         </button>
     </div>
 </Modal>
+
 
 
       </div>
