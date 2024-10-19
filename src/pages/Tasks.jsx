@@ -254,7 +254,7 @@ const Tasks = () => {
     style={{
         content: {
             maxWidth: '600px', // Limit the width
-            height: '100px',
+            height: '50px',
             margin: 'auto', // Center the modal
             padding: '0', // Remove padding to eliminate extra space
             border: '1px solid #E2E8F0', // Add a light border
